@@ -1,16 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 
 import Logo from "./assets/logo.svg";
-import Hashtag from "./assets/hashtag.svg";
-import Notifications from "./assets/notifications.svg";
-import Messages from "./assets/messages.svg";
-import Saved from "./assets/saved.svg";
-import Lists from "./assets/lists.svg";
-import Home from "./assets/home.svg";
-import Profile from "./assets/profile.svg";
-import More from "./assets/3dot.svg";
-export default function index() {
+
+import HashtagIcon from "./components/HasgtagIcon";
+import NotificationsIcon from "./components/NotificationIcon";
+import MessagesIcon from "./components/MessagesIcon";
+import SavedIcon from "./components/SavedIcon";
+import ListsIcon from "./components/ListsIcon";
+import ProfileIcon from "./components/ProfileIcon";
+import MoreIcon from "./components/MoreIcon";
+import HomeIcon from "./components/HomeIcon";
+
+import DotsImg from "./assets/3dot.svg";
+
+const activeItem = {
+  color: "rgb(44, 197, 113)",
+};
+
+export default function Index() {
+  const [selected, setSelected] = useState("home");
   return (
     <div className="sidebar">
       <div>
@@ -18,54 +27,120 @@ export default function index() {
           {" "}
           <img className="logo" alt="" src={Logo} />
         </div>
-        <div className="sidebar-item">
+        <div
+          onClick={() => {
+            setSelected("home");
+          }}
+          className="sidebar-item"
+        >
           {" "}
-          <img className="sidebar-icon" alt="" src={Home} />
-          <span> Anasayfa </span>
+          <HomeIcon
+            color={selected == "home" ? "rgb(44, 197, 113)" : "black"}
+          />
+          <span style={selected == "home" ? activeItem : {}}> Anasayfa </span>
         </div>
-        <div className="sidebar-item">
-          <img className="sidebar-icon" alt="" src={Hashtag} />
-          <span> Keşfet </span>
+        <div
+          onClick={() => {
+            setSelected("hashtag");
+          }}
+          className="sidebar-item"
+        >
+          <HashtagIcon
+            color={selected == "hashtag" ? "rgb(44, 197, 113)" : "black"}
+          />
+          <span style={selected == "hashtag" ? activeItem : {}}> Keşfet </span>
         </div>
-        <div className="sidebar-item">
-          <img className="sidebar-icon" alt="" src={Notifications} />
-          <span> Bildirimler </span>
+        <div
+          onClick={() => {
+            setSelected("notification");
+          }}
+          className="sidebar-item"
+        >
+          <NotificationsIcon
+            color={selected == "notification" ? "rgb(44, 197, 113)" : "black"}
+          />
+          <span style={selected == "notification" ? activeItem : {}}>
+            {" "}
+            Bildirimler{" "}
+          </span>
         </div>
-        <div className="sidebar-item">
-          <img className="sidebar-icon" alt="" src={Messages} />
-          <span> Mesajlar </span>
+        <div
+          onClick={() => {
+            setSelected("messages");
+          }}
+          className="sidebar-item"
+        >
+          <MessagesIcon
+            color={selected == "messages" ? "rgb(44, 197, 113)" : "black"}
+          />
+          <span style={selected == "messages" ? activeItem : {}}>
+            {" "}
+            Mesajlar{" "}
+          </span>
         </div>
-        <div className="sidebar-item">
-          <img className="sidebar-icon" alt="" src={Saved} />
-          <span> Yer İşaretleri </span>
+        <div
+          onClick={() => {
+            setSelected("saved");
+          }}
+          className="sidebar-item"
+        >
+          <SavedIcon
+            color={selected == "saved" ? "rgb(44, 197, 113)" : "black"}
+          />
+          <span style={selected == "saved" ? activeItem : {}}>
+            {" "}
+            Yer İşaretleri{" "}
+          </span>
         </div>
-        <div className="sidebar-item">
-          <img className="sidebar-icon" alt="" src={Lists} />
-          <span> Listeler </span>
+        <div
+          onClick={() => {
+            setSelected("lists");
+          }}
+          className="sidebar-item"
+        >
+          <ListsIcon
+            color={selected == "lists" ? "rgb(44, 197, 113)" : "black"}
+          />
+          <span style={selected == "lists" ? activeItem : {}}> Listeler </span>
         </div>
-        <div className="sidebar-item">
+        <div
+          onClick={() => {
+            setSelected("profile");
+          }}
+          className="sidebar-item"
+        >
           {" "}
-          <img className="sidebar-icon" alt="" src={Profile} />{" "}
-          <span>Profil </span>
+          <ProfileIcon
+            color={selected == "profile" ? "rgb(44, 197, 113)" : "black"}
+          />{" "}
+          <span style={selected == "profile" ? activeItem : {}}>Profil </span>
         </div>
-        <div className="sidebar-item">
-          <img className="sidebar-icon" alt="" src={More} />
-          <span> Daha Fazla </span>
+        <div
+          onClick={() => {
+            setSelected("more");
+          }}
+          className="sidebar-item"
+        >
+          <MoreIcon
+            color={selected == "more" ? "rgb(44, 197, 113)" : "black"}
+          />
+          <span style={selected == "more" ? activeItem : {}}> Daha Fazla </span>
         </div>
-        <div className="sidebar-item">
-          <div className="sidebar-tweet-button"> Tweetle </div>
-        </div>
+
+        <div id="sidebar-tweet-button"> Tweetle </div>
+
         <div className="sidebar-footer-box">
           <div>
             <img
               className="profile-photo-thumb"
+              alt=""
               src="https://pbs.twimg.com/profile_images/1359487114837192704/60M-aLXX_normal.jpg"
             />
             <div className="sidebar-footer-text">
               <span>Mustafa Çor Yılbaşı özel</span>
               <span> @corxjs </span>
             </div>
-            <img className="sidebar-footer-icon" alt="" src={More} />
+            <img alt="" className="sidebar-footer-icon" src={DotsImg} />
           </div>
         </div>
       </div>

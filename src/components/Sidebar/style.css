@@ -6,18 +6,26 @@
   left: 17%;
   width: 14%;
   height: 100vh;
-  border-right: 1px red solid;
+  border-right: 1px #ebeef0 solid;
+}
+@media screen and (max-width: 1400px) {
+  div.sidebar {
+    left: 0;
+    width: 22%;
+  }
 }
 .sidebar-item {
   padding: 13.5px;
   display: flex;
   cursor: pointer;
+  width: fit-content;
+  border-radius: 50px;
 }
 .sidebar-item:hover,
 .sidebar-item:hover .sidebar-icon {
   color: rgb(44, 197, 113);
   background-color: #e7f8ef;
-  fill: red;
+  fill: rgb(44, 197, 113) !important;
 }
 .sidebar-item:first-child {
   padding-top: 0;
@@ -41,9 +49,10 @@
   display: flex;
   flex-direction: column;
 }
-.sidebar-tweet-button {
+#sidebar-tweet-button {
+  cursor: pointer;
   background-color: rgb(23, 191, 99);
-  width: 95%;
+  width: 90%;
   padding: 12px;
   color: white;
   font-size: 13px;
