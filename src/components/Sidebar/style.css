@@ -8,10 +8,45 @@
   height: 100vh;
   border-right: 1px #ebeef0 solid;
 }
-@media screen and (max-width: 1400px) {
+
+@media all and (max-width: 1311px) {
   div.sidebar {
     left: 0;
     width: 22%;
+  }
+}
+@media all and (max-width: 1261px) {
+  div.sidebar-item span {
+    display: none;
+  }
+  div.sidebar {
+    left: 0;
+    width: fit-content;
+    height: 93vh;
+  }
+  div.sidebar-item {
+    justify-self: end;
+    align-self: flex-end;
+  }
+  .logo {
+    margin: 0 !important;
+    margin-top: 10px !important;
+  }
+
+  #sidebar-tweet-icon-button {
+    align-self: flex-end;
+    margin-right: 3px;
+    padding: 10.5px;
+    background-color: rgb(44, 197, 113);
+    width: fit-content;
+    text-align: center;
+    border-radius: 100px;
+  }
+
+  .sidebar-footer-text,
+  .sidebar-footer-icon,
+  #sidebar-tweet-button {
+    display: none;
   }
 }
 .sidebar-item {

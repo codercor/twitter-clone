@@ -13,7 +13,7 @@ import MoreIcon from "./components/MoreIcon";
 import HomeIcon from "./components/HomeIcon";
 
 import DotsImg from "./assets/3dot.svg";
-
+import TweetIconButton from "./assets/tweet-icon-button.svg";
 const activeItem = {
   color: "rgb(44, 197, 113)",
 };
@@ -24,7 +24,6 @@ export default function Index() {
     <div className="sidebar">
       <div>
         <div className="sidebar-item">
-          {" "}
           <img className="logo" alt="" src={Logo} />
         </div>
         <div
@@ -35,9 +34,9 @@ export default function Index() {
         >
           {" "}
           <HomeIcon
-            color={selected == "home" ? "rgb(44, 197, 113)" : "black"}
+            color={selected === "home" ? "rgb(44, 197, 113)" : "black"}
           />
-          <span style={selected == "home" ? activeItem : {}}> Anasayfa </span>
+          <span style={selected === "home" ? activeItem : {}}> Anasayfa </span>
         </div>
         <div
           onClick={() => {
@@ -46,9 +45,9 @@ export default function Index() {
           className="sidebar-item"
         >
           <HashtagIcon
-            color={selected == "hashtag" ? "rgb(44, 197, 113)" : "black"}
+            color={selected === "hashtag" ? "rgb(44, 197, 113)" : "black"}
           />
-          <span style={selected == "hashtag" ? activeItem : {}}> Keşfet </span>
+          <span style={selected === "hashtag" ? activeItem : {}}> Keşfet </span>
         </div>
         <div
           onClick={() => {
@@ -57,9 +56,9 @@ export default function Index() {
           className="sidebar-item"
         >
           <NotificationsIcon
-            color={selected == "notification" ? "rgb(44, 197, 113)" : "black"}
+            color={selected === "notification" ? "rgb(44, 197, 113)" : "black"}
           />
-          <span style={selected == "notification" ? activeItem : {}}>
+          <span style={selected === "notification" ? activeItem : {}}>
             {" "}
             Bildirimler{" "}
           </span>
@@ -71,9 +70,9 @@ export default function Index() {
           className="sidebar-item"
         >
           <MessagesIcon
-            color={selected == "messages" ? "rgb(44, 197, 113)" : "black"}
+            color={selected === "messages" ? "rgb(44, 197, 113)" : "black"}
           />
-          <span style={selected == "messages" ? activeItem : {}}>
+          <span style={selected === "messages" ? activeItem : {}}>
             {" "}
             Mesajlar{" "}
           </span>
@@ -85,9 +84,9 @@ export default function Index() {
           className="sidebar-item"
         >
           <SavedIcon
-            color={selected == "saved" ? "rgb(44, 197, 113)" : "black"}
+            color={selected === "saved" ? "rgb(44, 197, 113)" : "black"}
           />
-          <span style={selected == "saved" ? activeItem : {}}>
+          <span style={selected === "saved" ? activeItem : {}}>
             {" "}
             Yer İşaretleri{" "}
           </span>
@@ -99,9 +98,9 @@ export default function Index() {
           className="sidebar-item"
         >
           <ListsIcon
-            color={selected == "lists" ? "rgb(44, 197, 113)" : "black"}
+            color={selected === "lists" ? "rgb(44, 197, 113)" : "black"}
           />
-          <span style={selected == "lists" ? activeItem : {}}> Listeler </span>
+          <span style={selected === "lists" ? activeItem : {}}> Listeler </span>
         </div>
         <div
           onClick={() => {
@@ -111,9 +110,9 @@ export default function Index() {
         >
           {" "}
           <ProfileIcon
-            color={selected == "profile" ? "rgb(44, 197, 113)" : "black"}
+            color={selected === "profile" ? "rgb(44, 197, 113)" : "black"}
           />{" "}
-          <span style={selected == "profile" ? activeItem : {}}>Profil </span>
+          <span style={selected === "profile" ? activeItem : {}}>Profil </span>
         </div>
         <div
           onClick={() => {
@@ -122,12 +121,18 @@ export default function Index() {
           className="sidebar-item"
         >
           <MoreIcon
-            color={selected == "more" ? "rgb(44, 197, 113)" : "black"}
+            color={selected === "more" ? "rgb(44, 197, 113)" : "black"}
           />
-          <span style={selected == "more" ? activeItem : {}}> Daha Fazla </span>
+          <span style={selected === "more" ? activeItem : {}}>
+            {" "}
+            Daha Fazla{" "}
+          </span>
         </div>
 
         <div id="sidebar-tweet-button"> Tweetle </div>
+        <div id="sidebar-tweet-icon-button">
+          <img src={TweetIconButton} alt="" />
+        </div>
 
         <div className="sidebar-footer-box">
           <div>
