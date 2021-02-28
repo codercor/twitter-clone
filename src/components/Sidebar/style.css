@@ -1,0 +1,98 @@
+.sidebar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  left: 17%;
+  width: 14%;
+  height: 100vh;
+  border-right: 1px red solid;
+}
+.sidebar-item {
+  padding: 13.5px;
+  display: flex;
+  cursor: pointer;
+}
+.sidebar-item:hover,
+.sidebar-item:hover .sidebar-icon {
+  color: rgb(44, 197, 113);
+  background-color: #e7f8ef;
+  fill: red;
+}
+.sidebar-item:first-child {
+  padding-top: 0;
+}
+.sidebar > div:last-child {
+  padding-top: 0;
+}
+.sidebar-item > img {
+  margin-right: 10px;
+}
+.sidebar-item > span {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  padding-left: 4px;
+}
+.sidebar > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-tweet-button {
+  background-color: rgb(23, 191, 99);
+  width: 95%;
+  padding: 12px;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border-radius: 2rem;
+  text-align: center;
+}
+.logo {
+  margin-top: 5px;
+  height: 2rem;
+  width: 1.5em;
+}
+.sidebar-footer-box > div:hover {
+  background-color: #e7f8ef;
+}
+/* linklerin rengi : rgb(44,197,113) */
+.sidebar-footer-box {
+  flex-grow: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 5px;
+}
+.sidebar-footer-box > div {
+  display: flex;
+  flex-direction: row;
+  padding: 7px;
+  border-radius: 25px;
+}
+.sidebar-footer-box > div > img {
+  border-radius: 100px;
+  width: 40px;
+}
+.sidebar-footer-box > div > div.sidebar-footer-text > span {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+div.sidebar-footer-text > span:first-of-type {
+  font-weight: bold;
+  font-size: 14px;
+}
+div.sidebar-footer-text > span:last-of-type {
+  font-weight: 200;
+  font-size: 12px;
+}
+.sidebar-footer-icon {
+  height: 20px;
+  align-self: center;
+}
