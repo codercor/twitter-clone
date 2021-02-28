@@ -1,1 +1,15 @@
-
+.header-container div svg {
+  width: 15px;
+  fill: rgb(44, 197, 113);
+}
+.header-container {
+  display: flex;
+  border: 1px #e7f8ef solid;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px;
+  font-size: 13px;
+  font-weight: 900;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}

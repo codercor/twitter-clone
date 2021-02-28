@@ -3,11 +3,7 @@
   display: flex;
   position: absolute;
 }
-.sidebar {
-  order: 1;
-  overflow: hidden;
-}
-.stream {
-  order: 2;
-  border: 2px red solid;
+.main {
+  width: 32%;
+  height: min-content;
 }

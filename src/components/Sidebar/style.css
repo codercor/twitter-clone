@@ -3,15 +3,19 @@
   align-items: flex-start;
   justify-content: flex-start;
   position: relative;
-  left: 17%;
+
   width: 14%;
   height: 100vh;
   border-right: 1px #ebeef0 solid;
 }
-
+.container {
+  left: 17%;
+}
 @media all and (max-width: 1311px) {
-  div.sidebar {
+  .container {
     left: 0;
+  }
+  div.sidebar {
     width: 22%;
   }
 }
@@ -19,8 +23,10 @@
   div.sidebar-item span {
     display: none;
   }
-  div.sidebar {
+  .container {
     left: 0;
+  }
+  div.sidebar {
     width: fit-content;
     height: 93vh;
   }
