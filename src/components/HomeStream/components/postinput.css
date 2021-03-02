@@ -26,7 +26,7 @@
 }
 .post-input div .public-config {
   border-bottom: 1px #e7f8ef solid;
-
+  cursor: pointer;
   color: #17bf63;
   padding: 10px;
   font-size: 10px;
@@ -54,4 +54,7 @@
   color: rgb(141, 136, 136);
   content: attr(placeholder);
   width: 80% !important;
+}
+.text-area:focus {
+  outline: none;
 }
