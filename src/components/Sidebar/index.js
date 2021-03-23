@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+
+
 import "./style.css";
 
 import Logo from "./assets/logo.svg";
@@ -14,11 +16,13 @@ import HomeIcon from "./components/HomeIcon";
 
 import DotsImg from "./assets/3dot.svg";
 import TweetIconButton from "./assets/tweet-icon-button.svg";
+
+import { useHistory, withRouter } from "react-router-dom";
 const activeItem = {
   color: "rgb(44, 197, 113)",
 };
 
-export default function Index() {
+function Index({ history }) {
   const [selected, setSelected] = useState("home");
   return (
     <div className="sidebar">
@@ -29,6 +33,7 @@ export default function Index() {
         <div
           onClick={() => {
             setSelected("home");
+            history.push("/home")
           }}
           className="sidebar-item"
         >
@@ -38,9 +43,11 @@ export default function Index() {
           />
           <span style={selected === "home" ? activeItem : {}}> Anasayfa </span>
         </div>
+
         <div
           onClick={() => {
             setSelected("hashtag");
+            history.push("/explore")
           }}
           className="sidebar-item"
         >
@@ -52,6 +59,7 @@ export default function Index() {
         <div
           onClick={() => {
             setSelected("notification");
+            history.push("/notification")
           }}
           className="sidebar-item"
         >
@@ -66,6 +74,7 @@ export default function Index() {
         <div
           onClick={() => {
             setSelected("messages");
+            history.push("/messages")
           }}
           className="sidebar-item"
         >
@@ -80,6 +89,7 @@ export default function Index() {
         <div
           onClick={() => {
             setSelected("saved");
+            history.push("/bookmarks")
           }}
           className="sidebar-item"
         >
@@ -94,6 +104,7 @@ export default function Index() {
         <div
           onClick={() => {
             setSelected("lists");
+            history.push("/corxjs/lists")
           }}
           className="sidebar-item"
         >
@@ -105,6 +116,7 @@ export default function Index() {
         <div
           onClick={() => {
             setSelected("profile");
+            history.push("/corxjs")
           }}
           className="sidebar-item"
         >
@@ -117,6 +129,7 @@ export default function Index() {
         <div
           onClick={() => {
             setSelected("more");
+
           }}
           className="sidebar-item"
         >
@@ -152,3 +165,4 @@ export default function Index() {
     </div>
   );
 }
+export default withRouter(Index);

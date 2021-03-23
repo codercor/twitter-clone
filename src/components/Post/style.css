@@ -1,0 +1,11 @@
+.post{
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+}
+.profile-image{
+    width: 12%;
+}
+.profile-image img{
+    border-radius: 50px;
+}
